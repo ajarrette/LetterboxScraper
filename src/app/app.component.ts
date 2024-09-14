@@ -31,7 +31,13 @@ export class AppComponent {
           return acc;
         }, this.filmsSource.value.slice());
 
-        this.filmsSource.next(updatedFilmList);
+        updatedFilmList.sort((a, b) => b.weightedRating - a.weightedRating);
+        updatedFilmList.forEach((film, i) => {
+          film.weightedRanking = i + 1;
+          film.difference = film.ranking - film.weightedRanking;
+        });
+
+        this.filmsSource.next(updatedFilmList.slice(0, 250));
       });
   }
 }

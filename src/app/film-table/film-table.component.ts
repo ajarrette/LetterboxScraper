@@ -18,7 +18,16 @@ export class FilmTableComponent {
     this.dataSource.sort = this.sort;
   }
   dataSource!: MatTableDataSource<Film>;
-  displayedColumns: string[] = ['name', 'year', 'views', 'rating'];
+  displayedColumns: string[] = [
+    'weightedRanking',
+    'ranking',
+    'difference',
+    'name',
+    'year',
+    'views',
+    'rating',
+    'weightedRating',
+  ];
 
   constructor() {}
 
