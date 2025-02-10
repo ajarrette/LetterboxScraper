@@ -54,6 +54,7 @@ const annimationList: Record<string, boolean> = {
   'mary-and-max': animationDiscount,
   'monsters-inc': animationDiscount,
   mulan: animationDiscount,
+  'my-life-as-a-zucchini': animationDiscount,
   'my-neighbor-totoro': animationDiscount,
   'nausicaa-of-the-valley-of-the-wind': animationDiscount,
   'paddington-2': animationDiscount,
@@ -270,6 +271,7 @@ const ignoreList = new Set<string>([
   'stop-making-sense', // Concert
   'taylor-swift-the-eras-tour', // Concert
   'twin-peaks', // TV show
+  'twin-peaks-the-return', // TV show
   'the-wrong-trousers', // Short film
   'vincent', // Short film
   'wallace-gromit-the-curse-of-the-were-rabbit', // Short film
@@ -430,7 +432,9 @@ export class LetterboxdScraperService {
   }
 
   private getFilmYear(html: string): number {
-    return +this.getSubString(html, 'release-year', 14);
+    //return +this.getSubString(html, 'release-year', 14);
+    const year = +this.getYear(html);
+    return year;
   }
 
   private getSubString(
@@ -447,5 +451,16 @@ export class LetterboxdScraperService {
     startIndex += offset;
     const endIndex = filmHtml.indexOf(endingDelimiter, startIndex);
     return filmHtml.substring(startIndex, endIndex);
+  }
+
+  private getYear(filmHtml: string): string {
+    let titleIndex = filmHtml.indexOf('title="');
+    if (titleIndex < 0) {
+      return '';
+    }
+
+    titleIndex += 8;
+    const endIndex = filmHtml.indexOf('"', titleIndex);
+    return filmHtml.substring(endIndex - 5, endIndex - 1);
   }
 }
