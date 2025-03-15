@@ -53,6 +53,7 @@ const annimationList: Record<string, boolean> = {
   'lupin-the-third-the-castle-of-cagliostro': animationDiscount,
   'marcel-the-shell-with-shoes-on-2021': animationDiscount,
   'mary-and-max': animationDiscount,
+  'millennium-actress': animationDiscount,
   'monsters-inc': animationDiscount,
   mulan: animationDiscount,
   'my-life-as-a-zucchini': animationDiscount,
@@ -232,6 +233,7 @@ const ignoreList = new Set<string>([
   'all-too-well-the-short-film', // Short film
   'baby-reindeer', // TV Show
   'band-of-brothers', // TV mini series
+  'beef-2023', // TV show
   'big-little-lies', // TV mini series
   'black-mirror-san-junipero', // TV show
   'black-mirror-shut-up-and-dance', // TV show
@@ -259,6 +261,7 @@ const ignoreList = new Set<string>([
   'michael-jacksons-thriller', // Music video,
   'mickeys-christmas-carol',
   'miss-americana', // Documentary
+  'national-theatre-live-fleabag', // Special
   'neon-genesis-evangelion', // TV show
   'neon-genesis-evangelion-the-end-of-evangelion', // TV movie
   'night-and-fog', // Short film
@@ -268,10 +271,13 @@ const ignoreList = new Set<string>([
   'persepolis', // Just because
   'pink-floyd-the-wall',
   'planet-earth-2006', // Documentary
+  'pride-and-prejudice-1995', // TV mini series
+  'sharp-objects', // TV show
   'squid-game', // TV show
   'the-queens-gambit', // TV mini series
   'stop-making-sense', // Concert
   'taylor-swift-the-eras-tour', // Concert
+  'the-penguin-2024', // TV show
   'twin-peaks', // TV show
   'twin-peaks-the-return', // TV show
   'the-wrong-trousers', // Short film

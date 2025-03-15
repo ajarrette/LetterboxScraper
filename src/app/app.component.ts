@@ -40,4 +40,15 @@ export class AppComponent {
         this.filmsSource.next(updatedFilmList.slice(0, 250));
       });
   }
+
+  export() {
+    this.films$.subscribe((films) => {
+      let output: string = '';
+      for (let i = 0; i < films?.length; ++i) {
+        const film = films[i];
+        output += `https://letterboxd.com${film.link}\n`;
+      }
+      console.log(output);
+    });
+  }
 }

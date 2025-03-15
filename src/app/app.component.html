@@ -1,4 +1,5 @@
 <button mat-button (click)="onGetFilms()">Get films</button>
+<button mat-button (click)="export()">Export</button>
 
 <ng-container *ngIf="films$ | async as films">
   Films: {{ films.length }}
