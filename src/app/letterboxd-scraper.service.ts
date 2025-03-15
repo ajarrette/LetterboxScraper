@@ -37,6 +37,7 @@ const annimationList: Record<string, boolean> = {
   'corpse-bride': animationDiscount,
   'fantastic-mr-fox': animationDiscount,
   'finding-nemo': animationDiscount,
+  'flow-2024': animationDiscount,
   'ghost-in-the-shell': animationDiscount,
   'grave-of-the-fireflies': animationDiscount,
   'how-to-train-your-dragon': animationDiscount,
@@ -86,6 +87,7 @@ const annimationList: Record<string, boolean> = {
   'the-princess-and-the-frog': animationDiscount,
   'the-secret-of-nimh': animationDiscount,
   'the-tale-of-the-princess-kaguya': animationDiscount,
+  'the-wild-robot': animationDiscount,
   'the-wind-rises': animationDiscount,
   'tokyo-godfathers': animationDiscount,
   'toy-story': animationDiscount,
@@ -237,7 +239,7 @@ const ignoreList = new Set<string>([
   'big-little-lies', // TV mini series
   'black-mirror-san-junipero', // TV show
   'black-mirror-shut-up-and-dance', // TV show
-  'black-mirror-white-christmas', // TV showS
+  'black-mirror-white-christmas', // TV show
   'bo-burnham-inside', // TV special
   'chernobyl', // TV mini series
   'cowboy-bebop', // TV show
